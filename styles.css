@@ -1,0 +1,121 @@
+/*Global */
+@font-face {
+  font-family: newFont;
+  src: url(./fonts/MedievalSharp-Regular.ttf);
+}
+
+
+body {
+  margin: auto;
+  font-family: newFont;
+  font-weight: bold;
+  color: white;
+  display: block;
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/799/60/893/kingdom-come-deliverance-knight-horse-flag-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+figure img {
+  height: 450px;
+  width: 450px;
+  border-radius: 8px;
+}
+
+/*Computer Choice section*/
+.compChoice {
+  text-align: center;
+  display: flex;
+}
+
+
+.compChoice figure {
+  margin: auto;
+}
+
+#computerChoiceImg {
+  height: auto;
+  width: 430px;
+}
+
+
+#compHealth,
+#userHealth {
+  height: 50px;
+  width: 250px;
+  background-color: grey;
+}
+
+
+
+
+/*User choice section*/
+.userChoice {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+
+
+/*footer*/
+ul {
+  list-style: none;
+}
+
+.footerLinks li {
+  margin: 0;
+}
+
+footer {
+  background-color: #043458;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+#footerEyeCatch {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.footerLinks {
+  display: flex;
+  padding: 0;
+  align-items: baseline;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footerLinks p {
+  padding: 0;
+  margin: 30px;
+}
+
+.footerLinks li a {
+  font-size: large;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*
+  overlay style
+*/
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+  cursor: pointer;
+}
