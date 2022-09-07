@@ -37,19 +37,44 @@ function createHealth(userHealthContainer, compHealthContainer) {
 
 function computerAction() {
   let randomNum = Math.ceil(Math.random() * 3);
-  const actions = ['Bow', 'Sword', 'Shield'];
+  const actions = ['Bow & Arrow', 'Sword', 'Shield'];
   return actions[randomNum - 1]
 }
 
 
 //User Action
-function userAction() {
 
+//Bow and Arrow
+let bow = document.getElementById('bow')
+bow.addEventListener('click', bowAction)
+
+function bowAction() {
+  playRound(computerAction, 'Bow & Arrow')
+}
+
+let shield = document.getElementById('shield')
+bow.addEventListener('click', shieldAction)
+
+function shieldAction() {
+  playRound(computerAction(), 'Shield')
+}
+
+let sword = document.getElementById('sword')
+bow.addEventListener('click', swordAction)
+
+function swordAction() {
+  playRound(computerAction(), 'Sword')
 }
 
 
 //Play round
+function playRound(compAction, userAction) {
+  if (compAction === userAction) {
+    console.log('tie')
+    return;
+  }
 
-function playRound(computerAction, userAction) {
-
+  if (userAction === 'Bow & Arrow' && compAction === 'Shield') {
+    console.log('Your oponent deflects your arrow with his shield, and strikes you with sword')
+  }
 }
